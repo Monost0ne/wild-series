@@ -1,13 +1,10 @@
-@import "~bootstrap/scss/bootstrap";
-
 $primary: #3D3B39;
 $secondary: #FFC604;
+$danger: #ff4136;
+
+@import "bootstrap/scss/bootstrap";
+
 
 header {
     box-shadow: 0px 5px 5px -5px $primary;
-}
-
-body {
-    background-color: skyblue;
-    color: greenyellow;
 }
