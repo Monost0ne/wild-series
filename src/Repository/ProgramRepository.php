@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Category;
 use App\Entity\Program;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -20,7 +21,17 @@ class ProgramRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Program::class);
     }
-
+//    public function findProgramWithCategory(int $id): ?Program
+//    {
+//        $em = $this->getEntityManager();
+//        $statement = $em->createQuery(
+//            'SELECT p, c
+//            FROM Program p
+//            JOIN p.Category c
+//            WHERE p.id = :id'
+//        )->setParameter('id', $id);
+//        return $statement->getOneOrNullResult();
+//    }
 //    /**
 //     * @return Program[] Returns an array of Program objects
 //     */

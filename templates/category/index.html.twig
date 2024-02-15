@@ -4,12 +4,12 @@
 
 {% block body %}
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
     <ul>
-        <li>Your controller at <code>/Users/quentinguillemineau/Desktop/Wild/sfQuest/wild-series/src/Controller/CategoryController.php</code></li>
-        <li>Your template at <code>/Users/quentinguillemineau/Desktop/Wild/sfQuest/wild-series/templates/category/index.html.twig</code></li>
+    {% for category in categories %}
+        <li>
+            <a href="{{ path("category_show", { categoryName : category.name }) }}">{{ category.name }}</a>
+        </li>
+            {% endfor %}
     </ul>
 </div>
 {% endblock %}

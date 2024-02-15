@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}All our categories!{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        {% if listProgram is not null %}
+            {% for program in listProgram %}
+                <ul>
+                    <li>Identifiant de votre programme {{ program.id }}</li>
+                    <li>Titre de votre programme {{ program.title }}</li>
+                    <li>Résumé de votre programme {{ program.synopsis }}</li>
+                    <li><a href={{ path('program_show',{ id : program.id }) }}>Visualiser la fiche de cette série</a></li>
+                </ul>
+            {% endfor %}
+        {% else %}
+            <p>Aucune série trouvée!</p>
+        {% endif %}
+    </div>
+{% endblock %}
